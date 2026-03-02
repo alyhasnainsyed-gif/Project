@@ -24,3 +24,6 @@ def add_task():
 @app.route("/api/tasks")
 def get_tasks():
     return jsonify({"tasks": tasks})
+
+# Required for Vercel
+app = app
