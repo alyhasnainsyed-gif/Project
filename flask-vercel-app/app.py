@@ -27,7 +27,7 @@ def add_task():
         return jsonify({"status": "success", "tasks": tasks})
     return jsonify({"status": "error"}), 400
 
-@app.route("/api/tasks")
+@app.route("/api/task")
 def get_tasks():
     return jsonify({"tasks": tasks})
 
