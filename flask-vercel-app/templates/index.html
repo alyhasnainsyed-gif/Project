@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flask Vercel App</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <script defer src="/static/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Task List</h1>
+        <input id="taskInput" placeholder="New task" />
+        <button onclick="addTask()">Add</button>
+        <ul id="taskList"></ul>
+        <hr />
+        <button onclick="loadHello()">Say Hello</button>
+        <div id="apiResponse"></div>
+    </div>
+</body>
+</html>

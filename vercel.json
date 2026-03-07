@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "flask-vercel-app/app.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "flask-vercel-app/app.py" }
+  ]
+}

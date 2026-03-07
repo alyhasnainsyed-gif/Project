@@ -1,6 +1,12 @@
 from flask import Flask, render_template, request, jsonify
 
-app = Flask(__name__)
+# Flask will look for "static" and "templates" directories next to this file by default,
+# but we can be explicit so the behavior remains correct after reorganizing.
+app = Flask(
+    __name__,
+    static_folder="static",
+    template_folder="templates",
+)
 
 tasks = []
 
@@ -25,5 +31,7 @@ def add_task():
 def get_tasks():
     return jsonify({"tasks": tasks})
 
-# Required for Vercel
+# Vercel's Python builder expects a variable named `app` at the module level.
+# The line below is redundant now that we haven't reassigned `app`, but it's harmless and
+# left here for clarity if the code is refactored later.
 app = app
